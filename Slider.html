@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <title></title>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'fr'}</script>
+</head>
+<body class="body">
+    <h1>Slider Demo</h1>
+    <div>
+        <nav>
+            <ul id="menu">
+                <li><a id="A3" runat="server" href="Default.aspx">Accueil</a></li>
+                <li><a id="A4" runat="server" href="Contact.aspx">Contact</a></li>
+                <li><a id="A5" runat="server" href="Video.html">Video Demo</a></li>
+                <li><a id="A6" runat="server" href="Canvas.html">Canvas Demo</a></li>
+                <li><a id="A7" runat="server" href="FireWorks.html">Fireworks Demo</a></li>
+                <li><a id="A8" runat="server" href="Css3Animation.html">CSS3 Animation Demo</a></li>
+                <li><a id="A9" runat="server" href="Planetarium.html">HTML5 Planetarium Demo</a></li>
+            </ul>
+        </nav>
+     </div>
+    <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="Images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
+                <a href="http://dev7studios.com"><img src="Images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="images/walle.jpg" data-thumb="Images/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="images/nemo.jpg" data-thumb="Images/nemo.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>c'est</strong> un exemple de legende <a href="#">avec lien</a>. 
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+                slices: 15, // For slice animations
+                boxCols: 8, // For box animations
+                boxRows: 4, // For box animations
+                animSpeed: 500, // Slide transition speed
+                pauseTime: 3000, // How long each slide will show
+                startSlide: 0, // Set starting Slide (0 index)
+                directionNav: true, // Next & Prev navigation
+                controlNav: true, // 1,2,3... navigation
+                controlNavThumbs: false, // Use thumbnails for Control Nav
+                pauseOnHover: true, // Stop animation while hovering
+                manualAdvance: false, // Force manual transitions
+                prevText: 'Prev', // Prev directionNav text
+                nextText: 'Next', // Next directionNav text
+                randomStart: false, // Start on a random slide
+                beforeChange: function () { }, // Triggers before a slide transition
+                afterChange: function () { }, // Triggers after a slide transition
+                slideshowEnd: function () { }, // Triggers after all slides have been shown
+                lastSlide: function () { }, // Triggers when last slide is shown
+                afterLoad: function () { } // Triggers when slider has loaded
+            });
+        });
+</script>
+    <h2>Cette page est un exemple de slider mis en place sous Visual Studio 2012
+        avec jquery et css3.
+        Ce type de slider est très facile a mettre en place il suffit de suivre les instructions
+        étapes par étapes en cliquant <a runat="server" href="http://dev7studios.com/nivo-slider/#/documentation">ici</a>.
+    </h2>
+    <p>
+        <script type="in/share" data-counter="top"></script> 
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.afiouni.fr&layout=box_count&show_faces=true&width=65&action=like&font=arial&colorscheme=light&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:65px; margin-top:3px;" allowTransparency="true"></iframe>
+        <g:plusone size="tall"></g:plusone>
+        <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+        <a href="http://twitter.com/share" class="twitter-share-button"data-count="vertical" data-via="boiteagogo">Tweet</a>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </p>
+</body>
+</html>

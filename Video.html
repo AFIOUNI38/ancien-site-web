@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'fr'}</script>
+    <title></title>
+</head>
+<body>
+    <h1>Balise Video HTML5 Demo</h1><br />
+    <div>
+        <nav>
+            <ul id="menu">
+                <li><a id="A3" runat="server" href="Default.aspx">Accueil</a></li>
+                <li><a id="A4" runat="server" href="Contact.aspx">Contact</a></li>
+                <li><a id="A5" runat="server" href="Slider.html">Slider Demo</a></li>
+                <li><a id="A6" runat="server" href="Canvas.html">Canvas Demo</a></li>
+                <li><a id="A7" runat="server" href="FireWorks.html">Fireworks Demo</a></li>
+                <li><a id="A8" runat="server" href="Css3Animation.html">CSS3 Animation Demo</a></li>
+                <li><a id="A9" runat="server" href="Planetarium.html">HTML5 Planetarium Demo</a></li>
+            </ul>
+        </nav>
+     </div>
+    <div id="video" class="videoDemo">
+    <video width="800" height="444" controls="controls" poster="Images/age de glace.jpg">
+    <source src="Animation/L'Age de glace 4-Bande-annonce.mp4" type="video/mp4" />
+    <source src="Animation/L'Age de glace 4-Bande-annonce.webm" type="video/webm" />
+    <source src="Animation/L'Age de glace 4-Bande-annonce.oggtheora.ogv" type="video/ogg" />
+    <object type="application/x-shockwave-flash" width="800" height="444" data="http://www.youtube.com/watch?v=3nC9eOF-wiM">
+    <param name="movie" value="http://www.youtube.com/watch?v=3nC9eOF-wiM" />
+    <param name="wmode" value="transparent" />
+    <--[if lte IE 6 ]>
+   < src="http://www.youtube.com/watch?v=3nC9eOF-wiM" type="application/x-shockwave-flash"  allowscriptaccess="always" allowfullscreen="true" width="400" height="222">
+   </>
+  <[endif]-->
+  Vous n'avez pas de navigateur moderne, ni Flash installé... suivez les liens ci-dessous pour télécharger les vidéos.
+    </object>
+    </video>
+    </div>
+    <p>
+    Cette page est un exemple de balise video HTML5 paramétrée pour fonctionner sur tous types de navigateurs.
+    </p>
+    <p>
+        <script type="in/share" data-counter="top"></script> 
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.afiouni.fr&layout=box_count&show_faces=true&width=65&action=like&font=arial&colorscheme=light&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:65px; margin-top:3px;" allowTransparency="true"></iframe>
+        <g:plusone size="tall"></g:plusone>
+        <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+        <a href="http://twitter.com/share" class="twitter-share-button"data-count="vertical" data-via="boiteagogo">Tweet</a>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </p>
+</body>
+</html>

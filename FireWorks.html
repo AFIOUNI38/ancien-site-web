@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JavaScript Fireworks</title>
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <!-- Load Canvas support for IE8 and below (IE9 support Canvas) -->
+    <!--[if lt IE 9]><script src="Scripts/excanvas.js"></script><![end]-->
+
+    <!-- jQuery UI is only used for the nice slider controls -->
+    <link type="text/css" href="Content/ui.all.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="Scripts/ui.slider.js"></script>
+
+    <!-- Load the fireworks script and stylesheet -->
+    <script type="text/javascript" src="Scripts/fireworks.js"></script>
+    <link type="text/css" href="Content/fireworks.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>JavaScript Fireworks</h1>
+    <script type="text/javascript">
+        // we need a full screen canvas, but the canvas tag doesn't support percentage widths
+        // so we simply write out the canvas tag using javascript
+        document.write('<div style="background:url(Images/background.jpg) repeat-x;position:absolute;left:0;top:' + ($(window).height() - 193) + 'px;width:100%;height:200px;"></div>');
+        document.write('<canvas id="cv" width="' + $(window).width() + '" height="' + ($(window).height() - 100) + '" style="position:absolute;left:0;top:0;"></canvas>');
+        // obviously, this become wrong if the browser window changes size
+        // so we simply reload the page on resize
+    </script>
+    
+    <div id="message">
+        <audio src="Animation/MariahC.mp3" autoplay controls></audio>
+    </div>
+
+    
+    
+    <div id="slider_firework_speed"><span class="label" style="display:block;margin:10px 20px 10px -50px;">Speed</span></div>
+    <div id="slider_fragment_spread"><span class="label" style="display:block;margin:10px 20px 10px -50px;">Blast Radius</span></div>
+    <div id="slider_gravity"><span class="label" style="display:block;margin:10px 20px;">Gravity</span></div>
+    <div id="slider_framerate"><span class="label" style="display:block;margin:20px 20px;">Framerate</span></div>
+    
+    <div id="form">
+        <form onsubmit="FireworkDisplay.launchText();return false;">
+            <div>
+                <span class="boxtext">Entrer votre propre texte et cliquer sur lancer pour le voir en feu d'artifice</span><br/>
+                <input id="firetext" type="text" value="Love You ForEver"/>
+                <input id="launch" type="submit" value="Lancer!"/>
+            </div>
+        </form>
+    </div>
+    
+    <script type="text/javascript">
+        // analytics tag to report visitors.  We also report every message launched.
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-6696309-2");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+</body>
+</html>
